@@ -1,0 +1,332 @@
+body {
+  user-select: none;
+  color: white;
+  background: #121212;
+  font-family: Arial;
+}
+
+span {
+  color: grey;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48, 48, 48);
+  color: rgb(255, 255, 255);
+  margin: 1vw;
+  height: 10vh;
+  border-radius: 2vh;
+}
+
+.movieContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1vw;
+  background-color: rgb(32, 32, 32);
+  padding: 2vw;
+  border-radius: 2vh;
+  margin: 1vw;
+}
+
+.movieContainer > .loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 2vw;
+  background-color: #181818;
+  border-radius: 2vh;
+}
+
+.movieContainer > .loadingContainer > p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  color: grey;
+}
+
+.movieContainer > .movieItem {
+  padding: 4vw;
+  background-color: #181818;
+  display: flex; /* Make .movieItem a flex container */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; 
+  flex-direction: column;
+  border-radius: 2vh;
+  margin-top: 1vh;
+}
+
+.movieContainer > .movieItem:hover {
+  background-color: #3c3c3c;
+  cursor: grab;
+  cursor: grab;
+}
+
+.movieContainer > .movieItem > img {
+  background-color: #292929;
+  border-radius: 2vh;
+  width: 100%;
+}
+
+.movieContainer > .movieItem > p {
+  padding: 1vw;
+  background-color: #373737;
+  border: 2px solid grey;
+  border-radius: 2vh;
+}
+
+.movieSearchBarContainter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  margin: 1vw;
+  height: 10vh;
+  border-radius: 2vh;
+}
+
+.movieSearchBarContainter > input {
+  outline: none;
+  text-align: center;
+  width: 70vw;
+  height: 4.4vh;
+  border-radius: 2vh;
+  font-size: large;
+  border: 2px solid grey;
+  background-color: #181818;
+  color: white;
+  margin-right: .4vw;
+}
+
+.movieSearchBarContainter > button {
+  outline: none;
+  text-align: center;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 2vh;
+  border: 2px solid grey;
+  background-color: #181818;
+  color: grey;
+  font-size: 2vh;
+}
+
+.movieSearchBarContainter > button:hover {
+  border: 2px solid white;
+  color: white;
+  cursor: grab;
+}
+
+.paginantionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  margin: 1vw;
+  height: 10vh;
+  border-radius: 2vh;
+}
+
+.paginantionContainer > button {
+  outline: none;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 2vh;
+  background-color: #373737;
+  border: 2px solid grey;
+  color: white;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  text-align: center;
+  font-size: 2.5vh;
+}
+
+.paginantionContainer > button:hover {
+  border: 2px solid cornflowerblue;
+  color: cornflowerblue;
+  
+  cursor: grab;
+}
+
+.paginantionContainer > span {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  background-color: #3c3c3c;
+  padding: 1vh;
+  min-width: 1vw;
+  border-radius: 1vh;
+  text-align: center;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  margin: 1vw;
+  padding: 1vw;
+  border-radius: 2vh;
+}
+
+.footer > p > i {
+  color: cornflowerblue;
+}
+
+.footer > p > a {
+  color: cornflowerblue;
+}
+
+.movieItemInfosContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1vw;
+  background-color: #1b1b1b;
+  width: 50vw;
+  border-radius: 2vh;
+  border: 4px solid grey;
+}
+
+.movieItemInfosContainer > .toolBarTop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  gap: .2vw;
+}
+
+.movieItemInfosContainer > .toolBarTop > button {
+  outline: none;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 2vh;
+  border: 2px dashed white;
+  background-color: #373737;
+  border: 2px solid grey;
+  color: white;
+  text-align: center;
+}
+
+.movieItemInfosContainer > .toolBarTop > button:hover {
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: grab;
+}
+
+.movieItemInfosContainer > .row > img {
+  max-width: 40%;
+  max-height: 38vh;
+  border-radius: 2vh;
+}
+
+.movieItemInfosContainer > .row {
+  display: flex;
+  background-color: #373737;
+  border: 4px solid grey;
+  padding: 1vw;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin-top: 2vh;
+  border-radius: 2vh;
+}
+
+.movieItemInfosContainer > .row > h1 {
+  font-size: 100%;
+  background-color: #606060;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: center;
+  margin-right: 2vw;
+  padding: 2vw;
+  border-radius: 2vh;
+}
+
+.movieItemInfosContainer > p {
+  background-color: #373737;
+  border: 4px solid grey;
+  padding: 2vw;
+  border-radius: 2vh;
+  text-align: center;
+  width: 95%;
+  padding: 1vw;
+}
+
+.movieItemInfosContainer > div > i {
+  color: grey;
+}
+
+.movieItemInfosContainer > div > i:hover {
+  color: rgb(255, 255, 255);
+  cursor: grab;
+}
+
+.footer > .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+    width: 95%;
+    margin-top: 2vh;
+    border-radius: 2vh;
+}
+
+#linkIcon {
+  font-size: 4vh;
+}
+
+#linkIcon:hover {
+  color: rgb(147, 185, 255);
+  cursor: grab;
+}
+
+.loader {
+  border: 16px solid #373737;
+  border-radius: 50%;
+  border-top: 16px solid grey;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f123; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 2vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
